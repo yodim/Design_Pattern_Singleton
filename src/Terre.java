@@ -14,8 +14,8 @@ public class Terre {
 	}
 	
 	
-	public static Terre getInstance() {		
-			// bloc non synchronisé
+	public synchronized static Terre getInstance() {		
+			// bloc synchronisé
 			if( instance == null) {
 				instance = new Terre();
 			}
